@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <title>music taste demo</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+<div class="s-shadow j-flag" style="width: 50px; height: 50px;">
+    test div
+</div>
+<script src="http://cdn.staticfile.org/hammer.js/1.0.5/hammer.min.js"></script>
+<script type="text/javascript">
+    var el = document.getElementsByClassName('j-flag')[0];
+    var drag,lastdrag;
+
+    function watchDrag(event){
+
+    }
+
+    function dragStart(event){
+
+
+    };
+
+    function dragEnd(event){
+        console.log('dragEnd');
+    };
+
+    function onDrag(enent){
+        console.log('ondrag')
+    }
+    Hammer(el).on("dragstart", dragStart);
+    Hammer(el).on("dragend", dragEnd);
+    Hammer(el).on('drag', onDrag);
+</script>
+</body>
+</html>
