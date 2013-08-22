@@ -140,7 +140,7 @@ function dragCtrl($scope){
     };
 
     $scope.jump21 = function(type){
-        window[1] = type + '第二题';
+        window.result[1] = type + '第二题';
         switch(type){
             case 1:
                 location.href = '#/step3-1';
@@ -157,7 +157,7 @@ function dragCtrl($scope){
     };
 
     $scope.jump22 = function(type){
-        window[1] = type + '第二题';
+        window.result[1] = type + '第二题';
         switch(type){
             case 1:
                 location.href = '#/step3-4';
@@ -172,7 +172,7 @@ function dragCtrl($scope){
 
 
     $scope.jump23 = function(type){
-        window[1] = type + '第二题';
+        window.result[1] = type + '第二题';
         switch(type){
             case 1:
                 location.href = '#/setp3-4';
@@ -190,7 +190,7 @@ function dragCtrl($scope){
 
 
     $scope.jump31 = function(type){
-        window[1] = type + '第三题';
+        window.result[2] = type + '第三题';
         switch(type){
             case 1:
                 location.href = '#/step4';
@@ -207,7 +207,7 @@ function dragCtrl($scope){
     };
 
     $scope.jump32 = function(type){
-        window[1] = type + '第三题';
+        window.result[2] = type + '第三题';
         switch(type){
             case 1:
                 location.href = '#/step4';
@@ -224,7 +224,7 @@ function dragCtrl($scope){
     };
 
     $scope.jump33 = function(type){
-        window[1] = type + '第三题';
+        window.result[2] = type + '第三题';
         switch(type){
             case 1:
                 location.href = '#/step4';
