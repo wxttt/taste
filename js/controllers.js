@@ -176,22 +176,24 @@ function dragCtrl($scope){
                 location.href = '#/step3-4';
                 break;
             default:
-                location.href = '#/setp3-4'
+                location.href = '#/step3-4'
         }
     };
 
 
     $scope.jump23 = function(type){
         window.result[1] = type;
+        console.log('type is', type);
         switch(type){
             case 1:
-                location.href = '#/setp3-4';
+                location.href = '#/step3-4';
                 break;
             case 2:
-                location.href = '#/setp3-4';
+                console.log('case 2');
+                location.href = '#/step3-4';
                 break;
             case 3:
-                location.href = '#/setp3-4';
+                location.href = '#/step3-4';
                 break;
             default:
                 location.href = ''
