@@ -314,6 +314,7 @@ function step4Ctrl($scope){
 
 function endCtrl($scope){
     console.log('result is', window.result);
+    alert(navigator.userAgent);
 
     $scope.name = 'end';
     var resultConfig = {
