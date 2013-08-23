@@ -58,7 +58,6 @@ function dragCtrl($scope){
         else
             $scope.target = $event.target;
         $scope.lastDrag = $event.gesture.center;
-        console.log('last drag',$scope.lastDrag);
         $scope.target.style.zIndex = $scope.defaultIndex +1;
         $scope.defaultIndex += 1;
 
@@ -111,7 +110,7 @@ function dragCtrl($scope){
     }
 
     $scope.jump1 = function(type){
-        window.result[0] = type + '第一题';
+        window.result[0] = type;
         switch(type){
             case 1:
                 location.href = '#/step2-1';
@@ -139,17 +138,28 @@ function dragCtrl($scope){
         }
     };
 
+    //第二题国语/粤语分支
     $scope.jump21 = function(type){
-        window.result[1] = type + '第二题';
+        console.log('window.result', window.result[0]);
+        window.result[1] = type;
         switch(type){
             case 1:
-                location.href = '#/step3-1';
+                if(window.result[0] == 1)
+                    location.href = '#/step3-2';
+                else if(window.result[0] == 2)
+                    location.href = '#/step3-3';
                 break;
             case 2:
-                location.href = '#/step3-2';
+                if(window.result[0] == 1)
+                    location.href = '#/step3-1';
+                else if(window.result[0] == 2)
+                    location.href = '#/step3-3';
                 break;
             case 3:
-                location.href = '#step3-2';
+                if(window.result[0] == 1)
+                    location.href = '#/step3-1';
+                else if(window.result[0] == 2)
+                    location.href = '#/step3-3';
                 break;
             default:
                 location.href = ''
@@ -157,7 +167,7 @@ function dragCtrl($scope){
     };
 
     $scope.jump22 = function(type){
-        window.result[1] = type + '第二题';
+        window.result[1] = type;
         switch(type){
             case 1:
                 location.href = '#/step3-4';
@@ -172,7 +182,7 @@ function dragCtrl($scope){
 
 
     $scope.jump23 = function(type){
-        window.result[1] = type + '第二题';
+        window.result[1] = type;
         switch(type){
             case 1:
                 location.href = '#/setp3-4';
@@ -190,7 +200,7 @@ function dragCtrl($scope){
 
 
     $scope.jump31 = function(type){
-        window.result[2] = type + '第三题';
+        window.result[2] = type;
         switch(type){
             case 1:
                 location.href = '#/step4';
@@ -207,7 +217,7 @@ function dragCtrl($scope){
     };
 
     $scope.jump32 = function(type){
-        window.result[2] = type + '第三题';
+        window.result[2] = type;
         switch(type){
             case 1:
                 location.href = '#/step4';
@@ -224,7 +234,7 @@ function dragCtrl($scope){
     };
 
     $scope.jump33 = function(type){
-        window.result[2] = type + '第三题';
+        window.result[2] = type;
         switch(type){
             case 1:
                 location.href = '#/step4';
@@ -295,12 +305,14 @@ function step3Ctrl($scope){
 function step4Ctrl($scope){
     $scope.name = "step4";
     $scope.jump = function(){
-        console.log('I begin to do the step 4');
+
         location.href = '#/end'
     }
 }
 
 function endCtrl($scope){
+    console.log('result is', window.result);
+
     $scope.name = 'end';
     var resultConfig = {
         '1': '经鉴定，不当麦霸会死的普通青年”这个称号你绝对是当之无愧。给跪了，去KTV绝不甘心打酱油的熊孩子！',
