@@ -5,6 +5,10 @@ function startCtrl($scope){
     $scope.beginTest = function(){
         location.href = "#/step1";
     }
+
+
+    $scope.testUrl = "orpheus://share/tastetest/" + encodeURIComponent('分享的内容') +encodeURIComponent('http://s2.music.126.net/style/web2/img/download.png?v=1');
+    console.log($scope.testUrl);
     window.result = [];
 }
 
